@@ -1,0 +1,11 @@
+<mat-card style="background-color: black">
+  <mat-selection-list>
+    <app-add-task (onTaskAdd)="addTask($event)"></app-add-task>
+    <app-task-item
+      *ngFor="let task of tasks"
+      [task]="task"
+      (onTaskToggle)="toggleTask(task)"
+      (onTaskDelete)="deleteTask(task)"
+    ></app-task-item>
+  </mat-selection-list>
+</mat-card>

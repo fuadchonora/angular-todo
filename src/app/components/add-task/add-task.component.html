@@ -1,0 +1,11 @@
+<mat-card style="background-color: black">
+  <mat-form-field
+    appearance="outline"
+    class="white-text"
+    style="color: white; width: 100%"
+  >
+    <mat-label>Add Todo</mat-label>
+    <input matInput placeholder="Enter Todo" (keyup.enter)="onSubmit($event)" />
+    <mat-icon matSuffix>task</mat-icon>
+  </mat-form-field>
+</mat-card>

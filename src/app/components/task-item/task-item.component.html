@@ -1,0 +1,10 @@
+<mat-list-option
+  [value]="task.id"
+  [selected]="task.done"
+  (click)="onTaskToggleClick(task)"
+>
+  {{ task.text }}
+</mat-list-option>
+<button mat-mini-fab color="primary" aria-label="DELETE BUTTON">
+  <mat-icon (click)="onTaskDeleteClick(task)">delete</mat-icon>
+</button>
