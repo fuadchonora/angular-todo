@@ -2,7 +2,12 @@
   <mat-icon aria-hidden="false" aria-label="Example task icon">task</mat-icon>
   <span>{{ title }}</span>
   <span class="example-spacer"></span>
-  <button mat-mini-fab color="primary" aria-label="A BUTTON">
-    <mat-icon (click)="onAddBtnClick()">add</mat-icon>
+  <button
+    mat-mini-fab
+    color="{{ showAddForm ? 'secondary' : 'primary' }}"
+    aria-label="A BUTTON"
+    (click)="onAddBtnClick()"
+  >
+    <mat-icon>{{ showAddForm ? "remove" : "add" }}</mat-icon>
   </button>
 </mat-toolbar>
