@@ -3,6 +3,7 @@
   <span>{{ title }}</span>
   <span class="example-spacer"></span>
   <button
+    *ngIf="hasRoute('/')"
     mat-mini-fab
     color="{{ showAddForm ? 'secondary' : 'primary' }}"
     aria-label="A BUTTON"
